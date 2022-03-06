@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @Aadhi000
 
 import math
 import time
@@ -9,11 +9,11 @@ from pyrogram.types import Message, CallbackQuery
 from pyrogram.errors import FloodWait
 
 PROGRESS = """
-⏳ **Percentage:** `{0}%`
-✅ **Done:** `{1}`
-💠 **Total:** `{2}`
-📶 **Speed:** `{3}/s`
-🕰 **ETA:** `{4}`
+🚀 **𝚂𝙿𝙴𝙴𝙳 :** `{3}/s`
+⏳ **𝙿𝙴𝚁𝙲𝙴𝙽𝚃𝙰𝙶𝙴 :** `{0}%`
+✅ **𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝙳 :** `{1}`
+💠 **𝚃𝙾𝚃𝙰𝙻 𝚂𝙸𝚉𝙴 :** `{2}`
+⏱ **𝙴𝚂𝚃𝙸𝙼𝙰𝚃𝙴𝙳 𝚃𝙸𝙼𝙴 :** `{4}`
 """
 
 
@@ -37,8 +37,8 @@ async def progress_for_pyrogram(
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
         progress = "[{0}{1}] \n".format(
-            ''.join(["●" for _ in range(math.floor(percentage / 5))]),
-            ''.join(["○" for _ in range(20 - math.floor(percentage / 5))])
+            ''.join(["◾" for _ in range(math.floor(percentage / 5))]),
+            ''.join(["◽" for _ in range(20 - math.floor(percentage / 5))])
             )
 
         tmp = progress + PROGRESS.format(
