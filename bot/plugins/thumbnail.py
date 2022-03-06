@@ -44,5 +44,5 @@ async def delete_thumbnail(c: Client, m: "types.Message"):
         return await m.reply_text("I don't know about you sar :(")
     await add_user_to_database(c, m)
     await db.set_thumbnail(m.from_user.id, None)
-    await m.reply_text("Okay,\n"
-                       "I deleted custom thumbnail from my database.")
+    await m.reply_text("𝙾𝙺𝙰𝚈,\n"
+                       "𝙸 𝙳𝙴𝙻𝙴𝚃𝙴𝙳 𝙲𝚄𝚂𝚃𝙾𝙼 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻 𝙵𝚁𝙾𝙼 𝙼𝚈 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴.")
