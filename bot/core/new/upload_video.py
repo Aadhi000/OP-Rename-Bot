@@ -48,7 +48,7 @@ class UploadVideo:
         reply_to_message_id: int = None,
         schedule_date: int = None,
         reply_markup: Union[InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, ForceReply, None] = None,
-        status_message: str = "📤 Uploading as Video ..."
+        status_message: str = "📤 𝚄𝙿𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝙰𝚂 𝚅𝙸𝙳𝙴𝙾 ..."
     ) -> Optional[Message]:
         """
         Advanced Video Uploader Function.
@@ -70,7 +70,7 @@ class UploadVideo:
         :param reply_to_message_id: If the message is a reply, ID of the original message.
         :param schedule_date: Date when the message will be automatically sent. Unix time.
         :param reply_markup: Additional interface options. An object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.
-        :param status_message: Pass status string. Default: "📤 Uploading as Video ..."
+        :param status_message: Pass status string. Default: "📤 𝚄𝙿𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝙰𝚂 𝚅𝙸𝙳𝙴𝙾 ..."
         """
 
         duration = duration or (await get_audio_or_video_duration(video))
@@ -113,7 +113,7 @@ class UploadVideo:
             thumbnail = thumb
         if not caption:
             caption = f"**File Name:** `{os.path.basename(video)}`" \
-                      "\n\n**@AH_RenameBot**"
+                      "\n\n**@OpusTechz**"
         c_time = time.time()
         await self.send_video(
             chat_id=chat_id,
@@ -139,4 +139,4 @@ class UploadVideo:
                 c_time
             )
         )
-        await editable_message.edit("Uploaded Successfully!")
+        await editable_message.edit("𝙵𝙸𝙻𝙴 𝚄𝙿𝙻𝙾𝙰𝙳𝙴𝙳 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈")
