@@ -39,7 +39,7 @@ async def show_settings(m: "types.Message"):
 
     try:
         await m.edit(
-            text="**-𝙲𝚄𝚂𝚃𝙾𝙼𝙸𝚉𝙴 𝚃𝙷𝙴 𝙱𝙾𝚃 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂-**",
+            text="**- 𝙲𝚄𝚂𝚃𝙾𝙼𝙸𝚉𝙴 𝚃𝙷𝙴 𝙱𝙾𝚃 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂 -**",
             reply_markup=types.InlineKeyboardMarkup(buttons_markup),
             disable_web_page_preview=True,
             parse_mode="Markdown"
