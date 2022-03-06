@@ -1,5 +1,4 @@
-# (c) @AbirHasan2005
-
+# (c) @Aadhi000
 from bot.client import Client
 from pyrogram import filters
 from pyrogram import types
