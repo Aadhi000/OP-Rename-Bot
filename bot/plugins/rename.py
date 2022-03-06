@@ -33,23 +33,23 @@ async def rename_handler(c: Client, m: Message):
     if m.from_user.id not in Config.PRO_USERS:
         is_in_gap, sleep_time = await check_time_gap(m.from_user.id)
         if is_in_gap:
-            await m.reply_text("Sorry Sir,\n"
-                               "No Flooding Allowed!\n\n"
-                               f"Send After `{str(sleep_time)}s` !!",
+            await m.reply_text("𝚂𝙾𝚁𝚁𝚈 𝚂𝙸𝚁,\n"
+                               "𝙽𝙾 𝙵𝙻𝙾𝙾𝙳𝙸𝙽𝙶 𝙰𝙻𝙻𝙾𝚆𝙴𝙳!\n\n"
+                               f"𝚂𝙴𝙽𝙳 𝚃𝙷𝙸𝚂 𝙰𝙵𝚃𝙴𝚁 `{str(sleep_time)}s` !!",
                                quote=True)
             return
     await add_user_to_database(c, m)
     if (not m.reply_to_message) or (not m.reply_to_message.media) or (not get_file_attr(m.reply_to_message)):
-        return await m.reply_text("Reply to any document/video/audio to rename it!", quote=True)
+        return await m.reply_text("𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰𝙽𝚈 𝙳𝙾𝙲𝚄𝙼𝙴𝙽𝚃/𝚅𝙸𝙳𝙴𝙾/𝙰𝚄𝙳𝙸𝙾 𝚃𝙾 𝚁𝙴𝙽𝙰𝙼𝙴 𝙸𝚃!", quote=True)
 
     # Proceed
     editable = await m.reply_text("Now send me new file name!", quote=True)
     user_input_msg: Message = await c.listen(m.chat.id)
     if user_input_msg.text is None:
-        await editable.edit("Process Cancelled!")
+        await editable.edit("<b>𝙿𝚁𝙾𝙲𝙴𝚂𝚂 𝙲𝙰𝙽𝙲𝙴𝙻𝙻𝙴𝙳</b>")
         return await user_input_msg.continue_propagation()
     if user_input_msg.text and user_input_msg.text.startswith("/"):
-        await editable.edit("Process Cancelled!")
+        await editable.edit("<b>𝙿𝚁𝙾𝙲𝙴𝚂𝚂 𝙲𝙰𝙽𝙲𝙴𝙻𝙻𝙴𝙳</b>")
         return await user_input_msg.continue_propagation()
     _raw_file_name = get_media_file_name(m.reply_to_message)
     if not _raw_file_name:
@@ -59,7 +59,7 @@ async def rename_handler(c: Client, m: Message):
         file_name = user_input_msg.text.rsplit(".", 1)[0][:255] + "." + _raw_file_name.rsplit(".", 1)[-1].lower()
     else:
         file_name = user_input_msg.text[:255]
-    await editable.edit("Please Wait ...")
+    await editable.edit("<b>𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝙵𝙸𝙻𝙴 𝙳𝙴𝚃𝙰𝙸𝙻𝚂...</b>")
     is_big = get_media_file_size(m.reply_to_message) > (10 * 1024 * 1024)
     if not is_big:
         _default_thumb_ = await db.get_thumbnail(m.from_user.id)
