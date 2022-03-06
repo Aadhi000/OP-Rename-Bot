@@ -26,7 +26,7 @@ async def show_settings(m: "types.Message"):
         [types.InlineKeyboardButton("𝚂𝙴𝚃 𝙲𝚄𝚂𝚃𝙾𝙼 𝙲𝙰𝙿𝚃𝙸𝙾𝙽",
                                     callback_data="setCustomCaption")],
         [types.InlineKeyboardButton(f"{'Change' if thumbnail else 'Set'} Thumbnail",
-                                    callback_data="setThumbnail")]
+                                    callback_data="𝚂𝙴𝚃 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻")]
     ]
     if thumbnail:
         buttons_markup.append([types.InlineKeyboardButton("𝚂𝙷𝙾𝚆 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻",
