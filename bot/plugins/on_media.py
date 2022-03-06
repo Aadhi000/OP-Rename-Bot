@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @Aadhi000
 
 import asyncio
 from bot.client import Client
