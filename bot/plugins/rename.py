@@ -43,7 +43,7 @@ async def rename_handler(c: Client, m: Message):
         return await m.reply_text("𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰𝙽𝚈 𝙳𝙾𝙲𝚄𝙼𝙴𝙽𝚃/𝚅𝙸𝙳𝙴𝙾/𝙰𝚄𝙳𝙸𝙾 𝚃𝙾 𝚁𝙴𝙽𝙰𝙼𝙴 𝙸𝚃!", quote=True)
 
     # Proceed
-    editable = await m.reply_text("Now send me new file name!", quote=True)
+    editable = await m.reply_text("𝙽𝙾𝚆 𝚂𝙴𝙽𝙳 𝙼𝙴 𝙽𝙴𝚆 𝙵𝙸𝙻𝙴 𝙽𝙰𝙼𝙴!", quote=True)
     user_input_msg: Message = await c.listen(m.chat.id)
     if user_input_msg.text is None:
         await editable.edit("<b>𝙿𝚁𝙾𝙲𝙴𝚂𝚂 𝙲𝙰𝙽𝙲𝙴𝙻𝙻𝙴𝙳</b>")
@@ -81,7 +81,7 @@ async def rename_handler(c: Client, m: Message):
             file_name=file_name,
             progress=progress_for_pyrogram,
             progress_args=(
-                "Uploading ...\n"
+                "𝚄𝙿𝙻𝙾𝙰𝙳𝙸𝙽𝙶.....\n"
                 f"DC: {_c_file_id.dc_id}",
                 editable,
                 c_time
