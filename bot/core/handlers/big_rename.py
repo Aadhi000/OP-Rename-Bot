@@ -31,7 +31,7 @@ async def handle_big_rename(
     editable: Message,
     file_type: str
 ):
-    await editable.edit("Sending to you ...")
+    await editable.edit("𝚂𝙴𝙽𝙳𝙸𝙽𝙶 𝚃𝙾 𝚈𝙾𝚄...")
     upload_as_doc = await db.get_upload_as_doc(m.from_user.id)
 
     if (upload_as_doc is False) and (file_type == "video"):
@@ -61,7 +61,7 @@ async def handle_big_rename(
                   if _f_thumb
                   else None)
         if thumbnail_file_id:
-            await editable.edit("Fetching Thumbnail ...")
+            await editable.edit("𝙵𝙴𝚃𝙲𝙷𝙸𝙽𝙶 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻...")
             thumb_path = await c.download_media(thumbnail_file_id,
                                                 f"{Config.DOWNLOAD_DIR}/{m.from_user.id}/{m.message_id}/")
             if _db_thumb:
@@ -97,7 +97,7 @@ async def handle_big_rename(
                   if _f_thumb
                   else None)
         if thumbnail_file_id:
-            await editable.edit("Fetching Thumbnail ...")
+            await editable.edit("𝙵𝙴𝚃𝙲𝙷𝙸𝙽𝙶 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻...")
             thumb_path = await c.download_media(thumbnail_file_id,
                                                 f"{Config.DOWNLOAD_DIR}/{m.from_user.id}/{m.message_id}/")
             if _db_thumb:
@@ -142,7 +142,7 @@ async def handle_big_rename(
                   if _f_thumb
                   else None)
         if thumbnail_file_id:
-            await editable.edit("Fetching Thumbnail ...")
+            await editable.edit("𝙵𝙴𝚃𝙲𝙷𝙸𝙽𝙶 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻...")
             thumb_path = await c.download_media(thumbnail_file_id,
                                                 f"{Config.DOWNLOAD_DIR}/{m.from_user.id}/{m.message_id}/")
             if _db_thumb:
@@ -162,7 +162,7 @@ async def handle_big_rename(
             ]
         )
     else:
-        return await editable.edit("I can't rename it!")
+        return await editable.edit("𝙸 𝙲𝙰𝙽'𝚃 𝚁𝙴𝙽𝙰𝙼𝙴 𝙸𝚃!")
 
     reply_markup = m.reply_to_message.reply_markup \
         if m.reply_to_message.reply_markup \
@@ -172,7 +172,7 @@ async def handle_big_rename(
     if (not _db_caption) and (apply_caption is True):
         caption = m.reply_to_message.caption.markdown \
             if m.reply_to_message.caption \
-            else "**Developer: @AbirHasan2005**"
+            else "**𝙲𝚁𝙴𝙳𝙸𝚃𝚂 : @OpusTechz**"
     elif _db_caption and (apply_caption is True):
         caption = _db_caption
     else:
@@ -197,4 +197,4 @@ async def handle_big_rename(
         Config.LOGGER.getLogger(__name__).error(_err)
         Config.LOGGER.getLogger(__name__).info(f"{traceback.format_exc()}")
     else:
-        await editable.edit("Uploaded Successfully!")
+        await editable.edit("𝙵𝙸𝙻𝙴 𝚄𝙿𝙻𝙾𝙰𝙳𝙴𝙳 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈...")
