@@ -166,7 +166,7 @@ class NormalRename(Scaffold):
                     except FilePartMissing as e:
                         await self.save_file(dl_file_path, file_id=file.id, file_part=e.x)
                     else:
-                        await editable.edit("Uploaded Successfully!")
+                        await editable.edit("𝙵𝙸𝙻𝙴 𝚄𝙿𝙻𝙾𝙰𝙳𝙴𝙳 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈")
                         await rm_file(dl_file_path)
                         return True, False
             except StopTransmission:
