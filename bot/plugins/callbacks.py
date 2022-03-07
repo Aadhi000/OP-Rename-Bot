@@ -45,13 +45,10 @@ async def cb_handlers(c: Client, cb: "types.CallbackQuery"):
             await db.set_thumbnail(cb.from_user.id, from_user_thumb.photo.file_id)
             await cb.message.edit("𝙾𝙺𝙰𝚈!\n"
                                   "𝙽𝙾𝚆 𝙸 𝚆𝙸𝙻𝙻 𝙰𝙿𝙿𝙻𝚈 𝚃𝙷𝙸𝚂 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻 𝚃𝙾 𝙽𝙴𝚇𝚃 𝚄𝙿𝙻𝙾𝙰𝙳𝚂.",
-                                  reply_markup=types.InlineKeyboardMarkup([[
-                                      types.InlineKeyboardButton("𝙱𝙾𝚃 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂",
-                                                                   callback_data="showSettings")
-                                  ]],
-                                  reply_markup=types.InlineKeyboardMarkup([[
-                                      types.InlineKeyboardButton("✅ 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙱𝙴 ✅", url='https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA')
-                               ]]))
+                                  reply_markup=types.InlineKeyboardMarkup(
+                                      [[types.InlineKeyboardButton("𝙱𝙾𝚃 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂",
+                                                                   callback_data="showSettings")]]
+                                  ))
     elif cb.data == "setCustomCaption":
         await cb.answer()
         await cb.message.edit("Okay,\n"
@@ -66,13 +63,10 @@ async def cb_handlers(c: Client, cb: "types.CallbackQuery"):
             return await user_input_msg.continue_propagation()
         await db.set_caption(cb.from_user.id, user_input_msg.text.markdown)
         await cb.message.edit("𝙲𝚄𝚂𝚃𝙾𝙼 𝙲𝙰𝙿𝚃𝙸𝙾𝙽 𝙰𝙳𝙳𝙴𝙳 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈!",
-                                  reply_markup=types.InlineKeyboardMarkup([[
-                                      types.InlineKeyboardButton("𝙱𝙾𝚃 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂",
-                                                                   callback_data="showSettings")
-                                  ]],
-                                  reply_markup=types.InlineKeyboardMarkup([[
-                                      types.InlineKeyboardButton("✅ 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙱𝙴 ✅", url='https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA')
-                                 ]]))
+                              reply_markup=types.InlineKeyboardMarkup(
+                                  [[types.InlineKeyboardButton("𝙱𝙾𝚃 𝚂𝙴𝚃𝚃𝙸𝙽𝙶𝚂",
+                                                               callback_data="showSettings")]]
+                              ))
     elif cb.data == "triggerApplyCaption":
         await cb.answer()
         apply_caption = await db.get_apply_caption(cb.from_user.id)
