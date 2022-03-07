@@ -51,7 +51,7 @@ async def cb_handlers(c: Client, cb: "types.CallbackQuery"):
                                   ]],
                                   reply_markup=types.InlineKeyboardMarkup([[
                                       types.InlineKeyboardButton("✅ 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙱𝙴 ✅", url='https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA')
-                                  ]]))
+                                ]]))
     elif cb.data == "setCustomCaption":
         await cb.answer()
         await cb.message.edit("Okay,\n"
