@@ -35,13 +35,12 @@ from pyrogram.session import (
     Auth,
     Session
 )
-from pyrogram.scaffold import Scaffold
 
 LOGGER = Config.LOGGER
 log = LOGGER.getLogger(__name__)
 
 
-class CustomUploader(Scaffold):
+class CustomUploader:
     async def custom_upload(
         self,
         file_id: FileId,
