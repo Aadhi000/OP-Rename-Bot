@@ -28,7 +28,7 @@ from bot.core.utils.video_info import get_video_info
 from bot.core.utils.thumbnail_info import get_thumbnail_info
 
 
-class NormalRename(Scaffold):
+class NormalRename:
     async def normal_rename(
         self,
         file_id: str,
