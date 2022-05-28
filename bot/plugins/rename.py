@@ -25,7 +25,7 @@ from bot.core.handlers.time_gap import check_time_gap
 from bot.core.handlers.big_rename import handle_big_rename
 
 
-@Client.on_message(filters.command(["rename", "r"]) & filters.private & ~filters.edited)
+@Client.on_message(filters.command(["rename", "r"]) & filters.private)
 async def rename_handler(c: Client, m: Message):
     # Checks
     if not m.from_user:
