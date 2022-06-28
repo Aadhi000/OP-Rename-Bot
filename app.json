@@ -1,15 +1,15 @@
 {
     "name": "Telegram Files Rename Bot",
-    "description": "A Very Simple Telegram Files Rename Bot by @AbirHasan2005",
+    "description": "A Very Simple Telegram Files Rename Bot by @Fazer",
     "keywords": [
         "telegram",
         "files",
         "rename",
         "bot"
     ],
-    "repository": "https://github.com/AbirHasan2005/Rename-Bot",
-    "website": "https://abirhasan.wtf",
-    "success_url": "https://t.me/AH_RenameBot",
+    "repository": "https://github.com/Aadhi000/OP-Rename-Bot",
+    "website": "https://infinitysalesdl.blogspot.com",
+    "success_url": "https://t.me/infinity_moviesz",
     "env": {
         "API_ID": {
             "description": "Get this value from my.telegram.org or @TeleORG_Bot"
