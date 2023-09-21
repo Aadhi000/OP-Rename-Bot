@@ -27,7 +27,7 @@ def filesystem_free(path='.'):
     return free
 
 
-@Client.on_message(filters.command("video_info") & filters.private & ~filters.edited)
+@Client.on_message(filters.command("video_info") & filters.private)
 async def video_info_handler(c: Client, m: Message):
     await add_user_to_database(c, m)
     if filesystem_free() < 5000000000:

@@ -1,4 +1,4 @@
-Pyrogram
+git+https://github.com/subinps/pyrogram@inline-m
 TgCrypto
 pyromod
 python-dotenv
