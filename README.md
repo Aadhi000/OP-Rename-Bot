@@ -29,13 +29,13 @@ status - Show Users Count in DB. (Admin Only)
 <a href="https://t.me/JoinOT"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a>
 
 ## Deploy to Heroku
-Easy to Deploy to Heroku.
+Easy to Deploy to Heroku
 
 ### Video Tutorial:
 [![YouTube](https://img.shields.io/badge/YouTube-Video%20Tutorial-red?logo=youtube)](https://youtu.be/edcOa_cZWg4)
 
 
-Press Below Button to Deploy!
+Press Below Button to Deploy!https://github.com/Aadhi000/OP-Rename-Bot/forks
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Aadhi000/OP-Rename-Bot)
 
